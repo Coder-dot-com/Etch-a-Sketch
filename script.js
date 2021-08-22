@@ -15,7 +15,16 @@ let totalnumberOfSquares = gridSize * gridSize
 for (let i = 0; i < totalnumberOfSquares; i++) {
     gridSquare = document.createElement('div');
     gridSquare.className = "gridSquareStyle";
-    gridContainer.append(gridSquare);
     setSquareNumber(gridSize);
+    gridSquare.addEventListener('mouseover', addColorInClass);
+    gridContainer.append(gridSquare);
 
 }
+
+
+function addColorInClass(e) {
+    e.target.style.backgroundColor = "black";
+}
+
+
+
