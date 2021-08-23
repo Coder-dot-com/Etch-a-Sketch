@@ -6,24 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
-    <title>Document</title>
+    <title>Etch-a-Sketch</title>
+<header>
+</header>
+
 </head>
 <body>
+    <h1 class="title">Etch-A-Sketch</h1>
 
-    <div id=gridAndButtons>
+    <div class=gridAndButtons>
 
     <div id=buttonContainer>
-    <input id="selectColor" type="color"  value="#000000">
+        <label for="selectColor">Select Color:
+    <input id="selectColor" type="color"  value="#000000"> </label>
     <button id="toggleRainbow">Rainbow</button>
     <button id="reset">Reset</button></div>
 
-    <div class="sliderContainer">
-        <input type="range" min="4" max="100" value="16" class="slider" id="gridSizeSelector">
-      </div>
+    
     </div>
 
 
     <div id=gridContainer></div>
+
+    <div class=gridAndButtons>
+        <label id= "labelSize" for="gridSizeSelector">
+            <div class="sliderContainer">
+                <input type="range" min="4" max="100" value="16" class="slider" id="gridSizeSelector">
+              </div> Slide right for smaller squares
+            </label>
+    </div>
     </div>
 </body>
 </html>
