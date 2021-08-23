@@ -1,5 +1,7 @@
 gridContainer = document.querySelector("#gridContainer");
 
+//Grid Size Selector
+
 let gridSizeSelector = document.querySelector("#gridSizeSelector");
 
 
@@ -10,22 +12,21 @@ gridSizeSelector.oninput = function() {
 }
 
 
-let colorToAdd = "black"
 let root = document.querySelector(":root");
 
 
-
-
+//Grid
 
 function setSquareNumber(number) {
     root.style.setProperty("--squareNumber", number);
 }
 
-function removeSquares () {
+function removeSquares () { 
     let allSquares = document.querySelectorAll(".gridSquareStyle")
     allSquares.forEach(square => square.remove());
 }
 
+//Grid creator
 
 function createGrid (gridSize) {
     let gridTotalArea = gridSize * gridSize;
@@ -42,7 +43,16 @@ function createGrid (gridSize) {
 
 createGrid(16);
 
-// random color generator
+
+//User color selector
+
+let colorInput = document.querySelector("#selectColor")
+
+colorInput.addEventListener('change', changeColor)
+
+
+
+// Rainbow/random color generator
 
 const hexValuesList = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F"]
 function randomHexGen () {
@@ -53,12 +63,30 @@ function randomHexGen () {
     return randomHex
 }
 
+rainbowButton = document.querySelector("#toggleRainbow");
+rainbowButton.addEventListener('click', rainbow);
 
+function rainbow () {
+    rainbowButton.classList.toggle("rainbowOn")
+
+}
+
+
+// Adds color to square
+
+let colorToAdd = "black" // default color
+
+function changeColor () {
+    colorToAdd = String(colorInput.value);
+}
 
 
 function addColorInClass(e) {
-    e.target.style.backgroundColor = colorToAdd ;
-}
+    if (rainbowButton.classList.contains("rainbowOn")) { //checks if rainbow toggled on//
+        e.target.style.backgroundColor = randomHexGen()
+
+    } else {e.target.style.backgroundColor = colorToAdd ;
+}}
 
 
 // Reset Button

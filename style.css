@@ -23,3 +23,25 @@
     
 }
 
+.rainbowOn {
+    border: 2px solid black;
+}
+
+.sliderContainer {
+    display: flex;
+    width:20%;
+
+}
+
+
+.slider {
+    width: 20%%;
+    transform: rotate(180deg);
+
+}
+
+
+.gridAndButtons {
+    display: flex;
+    justify-content: center;
+}
