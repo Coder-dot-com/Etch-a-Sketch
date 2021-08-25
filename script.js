@@ -8,6 +8,7 @@ let gridSizeSelector = document.querySelector("#gridSizeSelector");
 
 gridSizeSelector.oninput = function() {
      gridSize = parseFloat(gridSizeSelector.value);
+     gridSizeDisplay.textContent = parseFloat(gridSizeSelector.value) + " x " + parseFloat(gridSizeSelector.value)
      createGrid (gridSize);
 }
 
@@ -41,7 +42,7 @@ function createGrid (gridSize) {
 }
 }
 
-createGrid(16);
+createGrid(10);
 
 
 //User color selector
@@ -100,8 +101,12 @@ resetButton.addEventListener('click', colorReset)
 function colorReset() {
     let allSquares = document.querySelectorAll(".gridSquareStyle")
     allSquares.forEach(square => square.style.backgroundColor = "#ffffff");
+    createGrid(16);
 
 }
 
 // Grid Size Selector
 
+gridSizeDisplay = document.querySelector("#gridSizeDisplay")
+
+console.log(gridSizeDisplay)

@@ -1,2 +1,1 @@
-grid number size under slider
 Style and design

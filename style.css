@@ -40,7 +40,7 @@ header {}
     align-items: center;
 }
 
-label {
+#labelColor {
     display: inline-block;
     font: arial;
     font-weight: bold;
@@ -49,11 +49,18 @@ label {
     border: 2px solid black;
     border-radius: 8px;
     text-align: center;
+    padding: 5px;
 }
 
 #labelSize {
-    display: flex;
-    flex-direction: column;
+    display: inline-block;
+    font: arial;
+    font-weight: bold;
+    font-size: 25px;
+    margin: 0.5rem;
+    border: 2px solid black;
+    border-radius: 8px;
+    text-align: center;
 }
 
 
@@ -73,17 +80,26 @@ button {
     
 }
 
+#selectColor {
+    padding: 0px;
+    border: none;
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;
+    margin: 0px 10px 0px 0px;
+}
+
 .sliderContainer {
     display:flex;
     flex-direction: column;
-    
+    padding: 5px 100px 0 100px;
    
 
 }
 
-.slider {
-    
-
+.sliderCaption {
+    font-size: 16px;
+    font-weight: normal;
 }
 
 
