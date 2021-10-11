@@ -5,7 +5,6 @@ gridContainer = document.querySelector("#gridContainer");
 let gridSizeSelector = document.querySelector("#gridSizeSelector");
 
 
-
 gridSizeSelector.oninput = function() {
      gridSize = parseFloat(gridSizeSelector.value);
      gridSizeDisplay.textContent = parseFloat(gridSizeSelector.value) + " x " + parseFloat(gridSizeSelector.value)
@@ -23,7 +22,7 @@ function setSquareNumber(number) {
 }
 
 function removeSquares () { 
-    let allSquares = document.querySelectorAll(".gridSquareStyle")
+    let allSquares = document.querySelectorAll(".square")
     allSquares.forEach(square => square.remove());
 }
 
@@ -35,7 +34,7 @@ function createGrid (gridSize) {
     setSquareNumber(gridSize);
     for (let i = 0; i < gridTotalArea; i++) {
     gridSquare = document.createElement('div');
-    gridSquare.className = "gridSquareStyle";
+    gridSquare.className = "square";
     gridSquare.addEventListener('mouseover', addColorInClass);
     gridContainer.append(gridSquare);
 
@@ -47,7 +46,7 @@ createGrid(10);
 
 //User color selector
 
-let colorInput = document.querySelector("#selectColor")
+let colorInput = document.querySelector(".select-color")
 
 colorInput.addEventListener('change', changeColor)
 
@@ -68,7 +67,7 @@ rainbowButton = document.querySelector("#toggleRainbow");
 rainbowButton.addEventListener('click', rainbow);
 
 function rainbow () {
-    rainbowButton.classList.toggle("rainbowOn")
+    rainbowButton.classList.toggle("rainbow-on")
 
 }
 
@@ -90,23 +89,28 @@ function addColorInClass(e) {
 }}
 
 
-// Reset Button
-
-
-resetButton = document.querySelector("#reset");
-
-resetButton.addEventListener('click', colorReset)
-
-
-function colorReset() {
-    let allSquares = document.querySelectorAll(".gridSquareStyle")
-    allSquares.forEach(square => square.style.backgroundColor = "#ffffff");
-    createGrid(16);
-
-}
 
 // Grid Size Selector
 
 gridSizeDisplay = document.querySelector("#gridSizeDisplay")
 
 console.log(gridSizeDisplay)
+
+// Reset Button
+
+
+resetButton = document.querySelector("#reset");
+
+resetButton.addEventListener('click', Reset)
+
+
+function Reset() {
+    let allSquares = document.querySelectorAll(".square")
+    allSquares.forEach(square => square.style.backgroundColor = "#ffffff");
+    colorInput.value = "#000000"
+    colorToAdd = "black"
+    gridSizeSelector.value = 10
+    gridSizeDisplay.textContent = parseFloat(gridSizeSelector.value) + " x " + parseFloat(gridSizeSelector.value)
+    createGrid(10);
+
+}

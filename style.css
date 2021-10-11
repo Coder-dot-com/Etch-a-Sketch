@@ -11,58 +11,8 @@ body {
     margin-right: auto;
     align-items: center;
     justify-content: center;
-
-}
-
-header {}
-
-#gridContainer {
-    display: grid;
-    grid-template-columns: repeat(var(--squareNumber), 1fr);
-    grid-template-rows: repeat(var(--squareNumber), 1fr);
-    width: 500px;
-    height: 500px;
-    border: 1px solid black;
- 
-}
-
-.gridSquareStyle {
-    border: 1px solid black;
-    display: flex;
-
     
 }
-
-#buttonContainer {
-    display: flex;
-    flex-direction: row;
-    vertical-align: middle;
-    align-items: center;
-}
-
-#labelColor {
-    display: inline-block;
-    font: arial;
-    font-weight: bold;
-    font-size: 25px;
-    margin: 0.5rem;
-    border: 2px solid black;
-    border-radius: 8px;
-    text-align: center;
-    padding: 5px;
-}
-
-#labelSize {
-    display: inline-block;
-    font: arial;
-    font-weight: bold;
-    font-size: 25px;
-    margin: 0.5rem;
-    border: 2px solid black;
-    border-radius: 8px;
-    text-align: center;
-}
-
 
 button {
     display: flex;
@@ -75,12 +25,63 @@ button {
     margin: 0.5rem;    
 }
 
-.rainbowOn {
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(var(--squareNumber), 1fr);
+    grid-template-rows: repeat(var(--squareNumber), 1fr);
+    width: 500px;
+    height: 500px;
+    border: 1px solid black;
+ 
+}
+
+.square {
+    border: 1px solid black;
+    display: flex;
+
+    
+}
+
+.button-container {
+    display: flex;
+    flex-direction: row;
+    vertical-align: middle;
+    align-items: center;
+}
+
+/* LABELS  */
+
+.color-label {
+    display: inline-block;
+    font: arial;
+    font-weight: bold;
+    font-size: 25px;
+    margin: 0.5rem;
+    border: 2px solid black;
+    border-radius: 8px;
+    text-align: center;
+    padding: 5px;
+}
+
+.size-label {
+    display: inline-block;
+    font: arial;
+    font-weight: bold;
+    font-size: 25px;
+    margin: 0.5rem;
+    border: 2px solid black;
+    border-radius: 8px;
+    text-align: center;
+}
+
+
+
+.rainbow-on {
     background-color: red;
     
 }
 
-#selectColor {
+.select-color {
     padding: 0px;
     border: none;
     width: 25px;
@@ -89,7 +90,7 @@ button {
     margin: 0px 10px 0px 0px;
 }
 
-.sliderContainer {
+.slider-container {
     display:flex;
     flex-direction: column;
     padding: 5px 100px 0 100px;
@@ -97,20 +98,9 @@ button {
 
 }
 
-.sliderCaption {
+.slider-caption {
     font-size: 16px;
     font-weight: normal;
 }
 
 
-/* .gridAndButtons {
-    display: flex;
-    justify-content: center;
-    box-sizing: border-box;
-    justify-self: center;
-}
-
-#buttonContainer {
-
-
-} */

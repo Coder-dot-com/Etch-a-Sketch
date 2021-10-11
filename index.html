@@ -16,9 +16,9 @@
 
     <div class=gridAndButtons>
 
-    <div id=buttonContainer>
-        <label id="labelColor" for="selectColor">Select Color:
-    <input id="selectColor" type="color"  value="#000000"> </label>
+    <div id=buttonContainer class="button-container">
+        <label id="labelColor" class="color-label" for="selectColor">Select Color:
+    <input id="selectColor" class="select-color" type="color"  value="#000000"> </label>
     <button id="toggleRainbow">Rainbow</button>
     <button id="reset">Reset</button></div>
 
@@ -26,14 +26,14 @@
     </div>
 
 
-    <div id=gridContainer></div>
+    <div id=gridContainer class="grid-container"></div>
 
     <div class=gridAndButtons>
-        <label id= "labelSize" for="gridSizeSelector">Square Size
-            <div class="sliderContainer">
+        <label id= "labelSize" class="size-label" for="gridSizeSelector">Square Size
+            <div class="slider-container">
                 <input type="range" min="10" max="100" value="10" class="slider" id="gridSizeSelector">
-              </div><p class="sliderCaption" id="gridSizeDisplay"> 10 x 10</p>
-              <p class="sliderCaption"> Slide right for smaller squares</p>
+              </div><p class="slider-caption" id="gridSizeDisplay"> 10 x 10</p>
+              <p class="slider-caption"> Slide right for smaller squares</p>
             </label>
     </div>
     </div>
